@@ -1,0 +1,6 @@
+rootProject.name = 'lsy_system'
+include 'utils'
+include 'domain'
+include 'admin'
+include 'auth'
+include 'web'
