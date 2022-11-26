@@ -1,5 +1,4 @@
 dependencies {
-	implementation project(path: ":utils", configuration: 'default')
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation project(path: ":web_common", configuration: 'default')
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
