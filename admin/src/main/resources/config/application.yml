@@ -7,6 +7,11 @@ spring:
     - optional:classpath:/config/application-common.yml
   profiles:
     active: local
+    
+admin:
+  test:
+    enc: ENC(9S8ZCjfbJ5dFesy2R9kghQz/8MmiGfqF)
+    
 --- #local config
 spring:
   config:

@@ -10,6 +10,8 @@ public class SampleRestController {
 	@Value("${real.common:as}") private String real;
 	@Value("${real.prof:as}") private String prof;
 	
+	@Value("${admin.test.enc}") private String enc;
+	
 	@RequestMapping("/admin/test")
 	public String asdf() {
 		return common;
@@ -23,5 +25,10 @@ public class SampleRestController {
 	@RequestMapping("/admin/prof")
 	public String prof() {
 		return prof;
+	}
+	
+	@RequestMapping("/admin/enc")
+	public String enc() {
+		return enc;
 	}
 }
