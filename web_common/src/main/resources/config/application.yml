@@ -1,0 +1,7 @@
+server:
+  port: 8811
+
+spring:
+  config:
+    import:
+    - optional:classpath:/config/application-common.yml

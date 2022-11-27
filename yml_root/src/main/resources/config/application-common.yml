@@ -1,0 +1,5 @@
+spring:
+  config:
+    import:
+    - optional:classpath:/config/application-admin.yml
+    - optional:classpath:/config/application-web_common.yml
