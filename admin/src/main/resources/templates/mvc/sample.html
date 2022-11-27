@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<span th:text="${sample}"></span>
+asdf
+	<!--/*<script th:src="@{/js/hello.js}"></script>*/-->
+	<script type="module" th:inline="javascript">
+		import haha from '/js/hello.js'
+		let a = /*[[${sample}]]*/ null;
+		let b = /*[[${sample2 ?: 2}]]*/ 2;
+		console.log('asdf', haha)
+		console.log(a);
+		console.log(b);
+		haha();
+	</script>
+</body>
+</html>

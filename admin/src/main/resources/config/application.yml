@@ -7,11 +7,18 @@ spring:
     - optional:classpath:/config/application-common.yml
   profiles:
     active: local
+  thymeleaf:
+    prefix: classpath:templates/mvc/
+    suffix: .html
+    cache: false
     
 admin:
   test:
     enc: ENC(9S8ZCjfbJ5dFesy2R9kghQz/8MmiGfqF)
-    
+
+
+
+
 --- #local config
 spring:
   config:
