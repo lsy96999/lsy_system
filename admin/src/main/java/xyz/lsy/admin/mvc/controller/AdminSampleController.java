@@ -10,6 +10,6 @@ public class AdminSampleController {
 	@RequestMapping("/sample")
 	public String sample(Model model) {
 		model.addAttribute("sample", "sample2");
-		return "sample";
+		return "mvc/sample";
 	}
 }
