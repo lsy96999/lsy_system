@@ -3,3 +3,34 @@ spring:
     import:
     - optional:classpath:/config/application-admin.yml
     - optional:classpath:/config/application-web_common.yml
+    
+real:
+  common: real
+--- #local config
+spring:
+  config:
+    activate:
+      on-profile: local
+real:
+  prof: local-prof
+--- #dev-config
+spring:
+  config:
+    activate:
+      on-profile: dev
+real:
+  prof: dev-prof
+--- #qa config
+spring:
+  config:
+    activate:
+      on-profile: qa
+real:
+  prof: qa-prof
+--- #prd config
+spring:
+  config:
+    activate:
+      on-profile: prd
+real:
+  prof: prd-prof

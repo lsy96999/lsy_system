@@ -1,7 +1,27 @@
 server:
-  port: 8811
+  port: 8088
 
 spring:
   config:
     import:
     - optional:classpath:/config/application-common.yml
+--- #local config
+spring:
+  config:
+    activate:
+      on-profile: local
+--- #dev config
+spring:
+  config:
+    activate:
+      on-profile: dev
+--- #qa config
+spring:
+  config:
+    activate:
+      on-profile: qa
+--- #prd config
+spring:
+  config:
+    activate:
+      on-profile: prd
