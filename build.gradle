@@ -1,11 +1,16 @@
 plugins {
 	id 'org.springframework.boot' version '3.0.0'
 	id 'java'
+	//id "com.github.node-gradle.node" version "3.5.0"
 }
 
 repositories {
 	mavenCentral()
 }
+
+//node{
+	//nodeProjectDir  = file("./admin")
+//}
 
 subprojects {
 	group = 'xyz.lsy'
@@ -16,6 +21,7 @@ subprojects {
 	apply plugin: 'java-library' 
 	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management' 
+	//apply plugin: 'com.github.node-gradle.node' 
 
 	configurations {
 		compileOnly {
@@ -37,4 +43,9 @@ subprojects {
 	tasks.named('test') {
 		useJUnitPlatform()
 	}
+	
+	//task myScript(type: YarnTask) {
+	//	//script = file('src/scripts/my.js')
+	//	args = ['tsc']
+	//}
 }

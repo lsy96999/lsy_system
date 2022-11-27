@@ -11,13 +11,15 @@
 asdf
 	<!--/*<script th:src="@{/js/hello.js}"></script>*/-->
 	<script type="module" th:inline="javascript">
-		import haha from '/js/hello.js'
+		import haha from '/js/tsc/Hello.js'
 		let a = /*[[${sample}]]*/ null;
 		let b = /*[[${sample2 ?: 2}]]*/ 2;
 		console.log('asdf', haha)
 		console.log(a);
 		console.log(b);
-		haha();
+		haha.point
+		
+		haha.logPoint(haha.point);
 	</script>
 </body>
 </html>
